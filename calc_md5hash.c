@@ -25,7 +25,7 @@ int main(int argc,char **argv){
     MD5_CTX context;
     MD5_Init(&context);
     while((bytes = read(fd,buf,BUFLEN)) != 0){
-        MD5_Update(&context,buf,bytes-1);
+        MD5_Update(&context,buf,(bytes-1));
     }
     MD5_Final(hashVal,&context);
     for(int i=0; i < MD5_DIGEST_LENGTH;i++){
@@ -33,4 +33,5 @@ int main(int argc,char **argv){
     }
     printf("\n");
     close(fd);
+    return 0;
 }
