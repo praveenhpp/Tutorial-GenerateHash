@@ -1,1 +1,19 @@
 
+This is example program to generate MD5 hash-value for a given file.
+
+Pre-conditions for compilations:
+Install openssl library and openssl development headers from Linux repo.
+OR
+Compile openssl from source.
+source for opessl can be found in below git-hub path
+https://github.com/openssl/openssl
+
+compile command:
+----------------
+gcc -o hash_exe calc_md5hash.c -lcrypto -lssl
+
+This command will generate "hash_exe" executable.
+run "./hash_exe filename" 
+
+
+
